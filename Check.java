@@ -27,18 +27,18 @@ package calc;
       String rdec = "[0-9]+";
       String rrim = "[IVXLCDMivxlcdm]+"; 
       
-      if ( res[3]!="Err" &&   s[0].trim().matches(rdec) && s[1].trim().matches(rdec) ) {res[3]="Dec"; }
-      else 
-          if ( s[0].trim().matches(rrim) && s[1].trim().matches(rrim)) {res[3]="Rim"; } 
-          else {res[3]="Err";}
-       
-      if (res[3]!="Err") {res[0]=s[0]; res[1]=s[1];}
-     //   System.out.println(ln.);
-      
-      
-      
       if (res[3]!="Err") {
       
+       if ( s[0].trim().matches(rdec) && s[1].trim().matches(rdec) ) {res[3]="Dec"; }
+      else 
+          if (s[0].trim().matches(rrim) && s[1].trim().matches(rrim)) {res[3]="Rim"; } 
+          else {res[3]="Err";}
+       
+      }
+      
+          
+      if (res[3]!="Err") {
+      res[0]=s[0]; res[1]=s[1];
       if (ln.contains("+")) {res[2]="+";}
       if (ln.contains("-")) {res[2]="-";}
       if (ln.contains("*")) {res[2]="*";}
@@ -47,11 +47,9 @@ package calc;
       
       }
       
-      
-      
-      
-      return res;
+           return res;
     
     
     } 
 }
+
