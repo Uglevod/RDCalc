@@ -16,16 +16,18 @@ package calc;
     public static String[] ch(String ln){
       // переменная для хранения ответа  
       String[] res = new String[4];
+      res[0]=res[1]="1";
         String s[];
       // разделяем по оперратору  
         s = ln.split("[-+*/]");
-      // если операндов больше чем 2 то ошибка  
-        if (s.length>2) {res[3]="Err";}
+      // если операндов < , > чем 2 то ошибка  
+        if (s.length>2 || s.length<2) {res[3]="Err";}
+        
       // проверка на односистемность
       String rdec = "[0-9]+";
       String rrim = "[IVXLCDMivxlcdm]+"; 
       
-      if (s[0].trim().matches(rdec) && s[1].trim().matches(rdec) && res[3]!="Err") {res[3]="Dec"; }
+      if ( res[3]!="Err" &&   s[0].trim().matches(rdec) && s[1].trim().matches(rdec) ) {res[3]="Dec"; }
       else 
           if ( s[0].trim().matches(rrim) && s[1].trim().matches(rrim)) {res[3]="Rim"; } 
           else {res[3]="Err";}

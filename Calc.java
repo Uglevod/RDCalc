@@ -23,6 +23,9 @@ public class Calc {
      */
     public static void main(String[] args) throws IOException {
         
+         
+        
+        
         int[] ai=new int[2];
        String out="";
         
@@ -66,8 +69,8 @@ public class Calc {
           
          if (res[3]=="Rim") {
           
-         String gout=out;    
-         out=DecimalToRoman.toRoman( Integer.parseInt(gout)); 
+          
+         out=DecimalToRoman.toRoman( Integer.parseInt(out)); 
            
          }
          
