@@ -23,7 +23,7 @@ package calc;
         if (s.length>2) {res[3]="Err";}
       // проверка на односистемность
       String rdec = "[0-9]+";
-      String rrim = "[IVXLCDM]+"; 
+      String rrim = "[IVXLCDMivxlcdm]+"; 
       
       if (s[0].trim().matches(rdec) && s[1].trim().matches(rdec) && res[3]!="Err") {res[3]="Dec"; }
       else 
