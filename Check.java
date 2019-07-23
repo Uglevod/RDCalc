@@ -33,12 +33,17 @@ package calc;
       if (res[3]!="Err") {res[0]=s[0]; res[1]=s[1];}
      //   System.out.println(ln.);
       
-      if (ln.contains("+") && res[3]!="Err") {res[2]="+";}
-      if (ln.contains("-") && res[3]!="Err") {res[2]="-";}
-      if (ln.contains("*") && res[3]!="Err") {res[2]="*";}
-      if (ln.contains("/") && res[3]!="Err") {res[2]="/";}
       
       
+      if (res[3]!="Err") {
+      
+      if (ln.contains("+")) {res[2]="+";}
+      if (ln.contains("-")) {res[2]="-";}
+      if (ln.contains("*")) {res[2]="*";}
+      if (ln.contains("/")) {res[2]="/";}
+      
+      
+      }
       
       
       
